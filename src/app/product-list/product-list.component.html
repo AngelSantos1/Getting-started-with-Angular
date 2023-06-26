@@ -18,9 +18,12 @@
 
 </div>
 
-<app-product-alerts
-  [product]="product">
-</app-product-alerts>
+<div *ngFor="let product of products">
+  <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()">
+  </app-product-alerts>
+</div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
